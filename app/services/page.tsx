@@ -1,0 +1,246 @@
+"use client";
+
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import {
+    ArrowUpRight,
+    Briefcase,
+    Building2,
+    ChefHat,
+    GraduationCap,
+    Truck,
+    Utensils
+} from "lucide-react";
+import Link from "next/link";
+import React, { useRef } from "react";
+
+// Service Data
+const services = [
+    {
+        id: 1,
+        title: "Hostel Mess Management",
+        description: "Nutritious, hygienic, and homely meals designed for growing students. We ensure a balanced diet that keeps energy high and tastes like home.",
+        icon: GraduationCap,
+        image: "https://images.unsplash.com/photo-1548943487-a2e4e43b485c?q=80&w=2070&auto=format&fit=crop", // Student cafeteria
+        features: ["Balanced Macronutrients", "Monthly Menu Rotation", "Late Night Snacks"]
+    },
+    {
+        id: 2,
+        title: "PG Catering Services",
+        description: "Reliable daily meal services for Paying Guest accommodations. Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
+        icon: Building2,
+        image: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=2000&auto=format&fit=crop", // Warm meal
+        features: ["Homely Taste", "Breakfast & Dinner Plans", "Sunday Specials"]
+    },
+    {
+        id: 3,
+        title: "Corporate Cafeterias",
+        description: "Fueling the workforce with professional cafeteria management. From power breakfasts to executive lunches, we handle it all.",
+        icon: Briefcase,
+        image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop", // Healthy lunch
+        features: ["Live Counters", "Health-Conscious Options", "Tea/Coffee Vending"]
+    },
+    {
+        id: 4,
+        title: "Wedding & Events",
+        description: "Our signature luxury catering for your special day. Exquisite menus, royal presentation, and service that treats guests like royalty.",
+        icon: Utensils,
+        image: "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070&auto=format&fit=crop", // Banquet
+        features: ["Multi-Cuisine Menu", "Silver Service", "Themed Stalls"]
+    },
+    {
+        id: 5,
+        title: "Industrial Catering",
+        description: "Large-scale food solutions for factories and industrial plants. High-calorie, satisfying meals focusing on food safety and hygiene.",
+        icon: ChefHat,
+        image: "https://images.unsplash.com/photo-1577103239843-f617a2dc63fb?q=80&w=2050&auto=format&fit=crop", // Large pot cooking
+        features: ["24/7 Shift Operations", "Cost-Effective", "ISO Certified Process"]
+    },
+    {
+        id: 6,
+        title: "Bulk Tiffin Service",
+        description: "Premium packed meal boxes for offices, sets, or large gatherings. Hot, fresh, and securely packed for easy consumption anywhere.",
+        icon: Truck,
+        image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=1974&auto=format&fit=crop", // Tiffin/Bento
+        features: ["Leak-Proof Packaging", "Customizable Box", "On-Time Delivery"]
+    },
+];
+
+// 3D Tilt Card Component
+const ServiceCard = ({ service }: { service: any }) => {
+    const ref = useRef<HTMLDivElement>(null);
+
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+
+    const mouseXSpring = useSpring(x);
+    const mouseYSpring = useSpring(y);
+
+    const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["17.5deg", "-17.5deg"]);
+    const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-17.5deg", "17.5deg"]);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        if (!ref.current) return;
+
+        const rect = ref.current.getBoundingClientRect();
+
+        const width = rect.width;
+        const height = rect.height;
+
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        const xPct = mouseX / width - 0.5;
+        const yPct = mouseY / height - 0.5;
+
+        x.set(xPct);
+        y.set(yPct);
+    };
+
+    const handleMouseLeave = () => {
+        x.set(0);
+        y.set(0);
+    };
+
+    return (
+        <motion.div
+            ref={ref}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+            style={{
+                rotateY,
+                rotateX,
+                transformStyle: "preserve-3d",
+            }}
+            className="relative h-[28rem] w-full rounded-3xl bg-zinc-900 border border-white/10 group cursor-pointer"
+        >
+            {/* Background Image with Overlay */}
+            <div
+                style={{
+                    transform: "translateZ(50px)",
+                    transformStyle: "preserve-3d",
+                }}
+                className="absolute inset-4 rounded-2xl overflow-hidden"
+            >
+                <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                    style={{ backgroundImage: `url(${service.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+            </div>
+
+            {/* Content Content */}
+            <div
+                style={{
+                    transform: "translateZ(75px)",
+                    transformStyle: "preserve-3d",
+                }}
+                className="absolute inset-0 flex flex-col justify-end p-8"
+            >
+                {/* Icon Badge */}
+                <div className="mb-auto transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center text-white shadow-lg shadow-orange-600/30">
+                        <service.icon size={20} />
+                    </div>
+                </div>
+
+                <h3 className="text-3xl font-black text-white mb-3 group-hover:text-orange-500 transition-colors uppercase tracking-tighter loading-none">
+                    {service.title}
+                </h3>
+
+                <p className="text-zinc-300 text-sm leading-relaxed mb-6 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+                    {service.description}
+                </p>
+
+                {/* Features List (Visible on Hover) */}
+                <ul className="space-y-2 mb-6 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-xs font-semibold text-zinc-400">
+                    {service.features.map((feature: string, idx: number) => (
+                        <li key={idx} className="flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                            {feature}
+                        </li>
+                    ))}
+                </ul>
+
+                <Link href="/contact" className="w-full">
+                    <button className="w-full py-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-white font-bold text-sm tracking-wide uppercase flex items-center justify-center gap-2 hover:bg-orange-600 hover:border-orange-600 transition-all">
+                        Get Quote <ArrowUpRight size={16} />
+                    </button>
+                </Link>
+            </div>
+        </motion.div>
+    );
+};
+
+export default function ServicesPage() {
+    return (
+        <div className="bg-zinc-950 min-h-screen pt-24 pb-20">
+            {/* HEADER */}
+            <div className="container mx-auto px-6 text-center mb-20">
+                <motion.span
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="inline-block py-1 px-3 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-bold tracking-[0.2em] uppercase mb-6"
+                >
+                    What We Do By Heart
+                </motion.span>
+                <motion.h1
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-6"
+                >
+                    Catering Solutions <br /> For <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600">Every Need</span>
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                    className="text-zinc-400 text-lg max-w-2xl mx-auto"
+                >
+                    From student hostels to corporate boardrooms, we bring the same level of passion, hygiene, and taste to every plate we serve.
+                </motion.p>
+            </div>
+
+            {/* SERVICES GRID */}
+            <div className="container mx-auto px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                    {services.map((service, index) => (
+                        <motion.div
+                            key={service.id}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            className="flex justify-center"
+                        >
+                            <ServiceCard service={service} />
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+
+            {/* CTA SECTION */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="container mx-auto px-6 mt-32"
+            >
+                <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-12 text-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/10 rounded-full blur-[80px]" />
+                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-zinc-700/10 rounded-full blur-[80px]" />
+
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 relative z-10">Can't find what you're looking for?</h2>
+                    <p className="text-zinc-400 max-w-xl mx-auto mb-8 relative z-10">
+                        We specialize in custom catering solutions. Reach out to us with your specific requirements, and we'll tailor a plan just for you.
+                    </p>
+                    <Link href="/contact" className="relative z-10">
+                        <button className="bg-white text-zinc-950 px-8 py-3 rounded-full font-bold hover:bg-orange-500 hover:text-white transition-all duration-300">
+                            Talk to an Expert
+                        </button>
+                    </Link>
+                </div>
+            </motion.div>
+        </div>
+    );
+}

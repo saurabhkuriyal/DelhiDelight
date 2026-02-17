@@ -26,7 +26,7 @@ const services = [
     {
         id: 2,
         title: "PG Catering Services",
-        description: "Reliable daily meal services for Paying Guest accommodations. Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
+        description: "Reliable daily meals services for Paying Guest accommodations. Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
         icon: Building2,
         image: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=2000&auto=format&fit=crop", // Warm meal
         features: ["Homely Taste", "Breakfast & Dinner Plans", "Sunday Specials"]

@@ -16,11 +16,11 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-zinc-950 border-t border-zinc-900 relative overflow-hidden">
+        <footer className="bg-emerald-50 border-t border-emerald-100 relative overflow-hidden">
             {/* Background Decoration */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-orange-600/5 rounded-full blur-[120px]" />
-                <div className="absolute top-[20%] right-[0%] w-[30%] h-[40%] bg-red-600/5 rounded-full blur-[100px]" />
+                <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-[#4ACF50]/10 rounded-full blur-[120px]" />
+                <div className="absolute top-[20%] right-[0%] w-[30%] h-[40%] bg-[#E91E63]/10 rounded-full blur-[100px]" />
             </div>
 
             <div className="container mx-auto px-6 py-16 relative z-10">
@@ -29,14 +29,14 @@ export default function Footer() {
                     {/* Brand Section */}
                     <div className="space-y-6">
                         <Link href="/" className="flex items-center gap-2 group">
-                            <div className="bg-orange-600 p-2 rounded-xl text-white shadow-lg shadow-orange-900/20 group-hover:rotate-12 transition-transform duration-300">
+                            <div className="bg-[#4ACF50] p-2 rounded-xl text-[#1e1b4b] shadow-[4px_4px_0px_0px_#1e1b4b] border-2 border-[#1e1b4b] group-hover:rotate-12 transition-transform duration-300">
                                 <UtensilsCrossed size={24} />
                             </div>
-                            <span className="text-2xl font-black tracking-tighter text-white">
-                                DELHI <span className="text-orange-500">DELIGHT</span>
+                            <span className="text-2xl font-black tracking-tighter text-[#1e1b4b]">
+                                DELHI <span className="text-[#4ACF50] text-[#1e1b4b]">DELIGHT</span>
                             </span>
                         </Link>
-                        <p className="text-zinc-400 text-sm leading-relaxed max-w-xs">
+                        <p className="text-[#1e1b4b] text-sm leading-relaxed max-w-xs font-medium">
                             Crafting culinary masterpieces since 1998. We bring the authentic taste of tradition to your most cherished celebrations.
                         </p>
                         <div className="flex gap-4">
@@ -49,7 +49,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-6">Quick Links</h4>
+                        <h4 className="text-zinc-950 font-bold text-lg mb-6">Quick Links</h4>
                         <ul className="space-y-4">
                             <FooterLink href="/" label="Home" />
                             <FooterLink href="/about" label="About Us" />
@@ -61,7 +61,7 @@ export default function Footer() {
 
                     {/* Our Services */}
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-6">Services</h4>
+                        <h4 className="text-zinc-950 font-bold text-lg mb-6">Services</h4>
                         <ul className="space-y-4">
                             <FooterLink href="/services" label="Wedding Catering" />
                             <FooterLink href="/services" label="Corporate Events" />
@@ -73,22 +73,22 @@ export default function Footer() {
 
                     {/* Contact Info */}
                     <div>
-                        <h4 className="text-white font-bold text-lg mb-6">Contact Us</h4>
+                        <h4 className="text-zinc-950 font-bold text-lg mb-6">Contact Us</h4>
                         <ul className="space-y-6">
-                            <li className="flex items-start gap-4 text-zinc-400 group">
-                                <div className="mt-1 p-2 rounded-full bg-zinc-900 border border-zinc-800 group-hover:border-orange-500/50 group-hover:text-orange-500 transition-colors">
+                            <li className="flex items-start gap-4 text-zinc-600 group">
+                                <div className="mt-1 p-2 rounded-full bg-white border border-emerald-100 group-hover:border-amber-500/50 group-hover:text-amber-600 transition-colors">
                                     <MapPin size={16} />
                                 </div>
                                 <span className="text-sm">123, Flavor Avenue, Connaught Place, New Delhi - 110001</span>
                             </li>
-                            <li className="flex items-center gap-4 text-zinc-400 group">
-                                <div className="p-2 rounded-full bg-zinc-900 border border-zinc-800 group-hover:border-orange-500/50 group-hover:text-orange-500 transition-colors">
+                            <li className="flex items-center gap-4 text-zinc-600 group">
+                                <div className="p-2 rounded-full bg-white border border-emerald-100 group-hover:border-amber-500/50 group-hover:text-amber-600 transition-colors">
                                     <Phone size={16} />
                                 </div>
                                 <span className="text-sm">+91 98765 43210</span>
                             </li>
-                            <li className="flex items-center gap-4 text-zinc-400 group">
-                                <div className="p-2 rounded-full bg-zinc-900 border border-zinc-800 group-hover:border-orange-500/50 group-hover:text-orange-500 transition-colors">
+                            <li className="flex items-center gap-4 text-zinc-600 group">
+                                <div className="p-2 rounded-full bg-white border border-emerald-100 group-hover:border-amber-500/50 group-hover:text-amber-600 transition-colors">
                                     <Mail size={16} />
                                 </div>
                                 <span className="text-sm">hello@delhidelight.com</span>
@@ -98,13 +98,13 @@ export default function Footer() {
                 </div>
 
                 {/* Newsletter / Bottom Bar */}
-                <div className="mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-zinc-500 text-sm">
+                <div className="mt-16 pt-8 border-t border-[#4ACF50]/30 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p className="text-[#1e1b4b]/60 text-sm font-bold">
                         &copy; {currentYear} Delhi Delight Caterers. All rights reserved.
                     </p>
-                    <div className="flex gap-8 text-sm text-zinc-500">
-                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                    <div className="flex gap-8 text-sm text-[#1e1b4b]/60 font-bold">
+                        <Link href="#" className="hover:text-[#E91E63] transition-colors">Privacy Policy</Link>
+                        <Link href="#" className="hover:text-[#E91E63] transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>
@@ -118,7 +118,7 @@ function SocialIcon({ icon: Icon, href }: { icon: any, href: string }) {
     return (
         <a
             href={href}
-            className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 hover:bg-orange-600 hover:text-white hover:border-orange-500 transition-all duration-300"
+            className="w-10 h-10 rounded-full bg-white border-2 border-[#1e1b4b] flex items-center justify-center text-[#1e1b4b] hover:bg-[#4ACF50] hover:text-[#1e1b4b] transition-all duration-300 shadow-[3px_3px_0px_0px_#1e1b4b] hover:shadow-[1px_1px_0px_0px_#1e1b4b] hover:translate-x-[2px] hover:translate-y-[2px]"
         >
             <Icon size={18} />
         </a>
@@ -130,9 +130,9 @@ function FooterLink({ href, label }: { href: string, label: string }) {
         <li>
             <Link
                 href={href}
-                className="text-zinc-500 hover:text-orange-500 transition-colors flex items-center gap-2 group text-sm font-medium"
+                className="text-[#1e1b4b] hover:text-[#E91E63] transition-colors flex items-center gap-2 group text-sm font-bold"
             >
-                <div className="w-1.5 h-1.5 rounded-full bg-zinc-800 group-hover:bg-orange-500 transition-colors" />
+                <div className="w-2 h-2 rounded-full bg-[#4ACF50] group-hover:bg-[#E91E63] transition-colors border border-[#1e1b4b]" />
                 {label}
             </Link>
         </li>

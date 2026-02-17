@@ -12,15 +12,29 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Funky & Colorful Theme */
+:root {
+  --background: #ffffff;
+  --foreground: #1e1b4b;
+  /* indigo-950 - Deep Navy Blue, NOT Black */
+
+  --brand-green: #4ACF50;
+  --brand-orange: #FF9800;
+  --brand-pink: #E91E63;
 }
 
 body {
   background: var(--background);
+  /* Funky gradient background */
+  background-image: radial-gradient(at 0% 0%, rgba(74, 207, 80, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(233, 30, 99, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(255, 152, 0, 0.05) 0px, transparent 50%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #4ACF50;
+  color: #1e1b4b;
 }

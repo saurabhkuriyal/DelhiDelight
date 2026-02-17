@@ -79,15 +79,19 @@ const galleryItems = [
 
 export default function GalleryPage() {
     return (
-        <div className="bg-zinc-950 min-h-screen pt-24 pb-20">
+        <div className="bg-white min-h-screen pt-24 pb-20 relative overflow-hidden">
+            {/* Background Blobs */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#E91E63]/10 rounded-full blur-[120px]" />
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#4ACF50]/15 rounded-full blur-[120px]" />
+
             {/* Header Section */}
-            <div className="container mx-auto px-6 text-center mb-16">
+            <div className="container mx-auto px-6 text-center mb-16 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="mb-6"
                 >
-                    <span className="py-1 px-4 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-bold tracking-[0.2em] uppercase">
+                    <span className="inline-block py-2 px-6 rounded-full bg-[#FF9800] text-[#1e1b4b] border-[3px] border-white text-xs font-black tracking-[0.2em] uppercase shadow-[4px_4px_0px_0px_#1e1b4b] transform -rotate-1">
                         Our Portfolio
                     </span>
                 </motion.div>
@@ -95,31 +99,31 @@ export default function GalleryPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-6"
+                    className="text-4xl md:text-7xl font-black text-[#1e1b4b] tracking-tighter mb-6 drop-shadow-sm"
                 >
-                    A Visual <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600">Feast</span>
+                    A Visual <span className="text-[#4ACF50] text-shadow-sm">Feast</span>
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="text-zinc-400 text-lg max-w-2xl mx-auto"
+                    className="text-[#1e1b4b]/70 text-lg max-w-2xl mx-auto font-bold"
                 >
                     Explore our finest culinary creations and event setups from recent celebrations.
                 </motion.p>
             </div>
 
             {/* Masonry Grid */}
-            <div className="container mx-auto px-6">
-                <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                     {galleryItems.map((item, index) => (
                         <GalleryItem key={item.id} item={item} index={index} />
                     ))}
                 </div>
             </div>
 
-            <div className="text-center mt-20">
-                <p className="text-zinc-500 text-sm">Follow us on Instagram <span className="text-orange-500 font-bold">@delhidelight</span> for daily updates</p>
+            <div className="text-center mt-20 relative z-10">
+                <p className="text-[#1e1b4b]/60 text-sm font-bold">Follow us on Instagram <span className="text-[#E91E63] font-black">@delhidelight</span> for daily updates</p>
             </div>
         </div>
     );
@@ -132,7 +136,7 @@ function GalleryItem({ item, index }: { item: any, index: number }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
-            className={`relative rounded-3xl overflow-hidden break-inside-avoid group cursor-pointer border border-zinc-800 bg-zinc-900 mb-6`}
+            className={`relative rounded-3xl overflow-hidden break-inside-avoid group cursor-pointer border-[3px] border-[#1e1b4b] bg-white mb-8 shadow-[8px_8px_0px_0px_#4ACF50] hover:shadow-[4px_4px_0px_0px_#4ACF50] hover:translate-x-[4px] hover:translate-y-[4px] transition-all`}
         >
             {/* Image */}
             <div className="relative w-full aspect-auto">
@@ -146,21 +150,21 @@ function GalleryItem({ item, index }: { item: any, index: number }) {
             </div>
 
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-900/50 to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex flex-col justify-end p-6">
 
                 {/* Top Actions (Slide down on hover) */}
                 <div className="absolute top-4 right-4 flex gap-2 translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 delay-100">
-                    <button className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-orange-500 hover:text-white transition-colors">
+                    <button className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-emerald-500 hover:text-white transition-colors">
                         <Heart size={18} />
                     </button>
-                    <button className="p-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-black transition-colors">
+                    <button className="p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:bg-white hover:text-emerald-950 transition-colors">
                         <Share2 size={18} />
                     </button>
                 </div>
 
                 {/* Bottom Text (Slide up on hover) */}
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="text-orange-400 text-xs font-bold tracking-widest uppercase mb-2 inline-block">
+                    <span className="text-emerald-300 text-xs font-bold tracking-widest uppercase mb-2 inline-block">
                         {item.category}
                     </span>
                     <h3 className="text-2xl font-bold text-white leading-tight">

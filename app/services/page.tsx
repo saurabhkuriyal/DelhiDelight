@@ -111,7 +111,7 @@ const ServiceCard = ({ service }: { service: any }) => {
                 rotateX,
                 transformStyle: "preserve-3d",
             }}
-            className="relative h-[28rem] w-full rounded-3xl bg-zinc-900 border border-white/10 group cursor-pointer"
+            className="relative h-[28rem] w-full rounded-3xl bg-white border-[3px] border-[#1e1b4b] shadow-[8px_8px_0px_0px_#FF9800] group cursor-pointer hover:shadow-[4px_4px_0px_0px_#FF9800] transition-all"
         >
             {/* Background Image with Overlay */}
             <div
@@ -138,32 +138,32 @@ const ServiceCard = ({ service }: { service: any }) => {
             >
                 {/* Icon Badge */}
                 <div className="mb-auto transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <div className="w-12 h-12 rounded-full bg-orange-600 flex items-center justify-center text-white shadow-lg shadow-orange-600/30">
-                        <service.icon size={20} />
+                    <div className="w-16 h-16 rounded-full bg-[#4ACF50] border-2 border-[#1e1b4b] flex items-center justify-center text-[#1e1b4b] shadow-[4px_4px_0px_0px_#1e1b4b]">
+                        <service.icon size={28} />
                     </div>
                 </div>
 
-                <h3 className="text-3xl font-black text-white mb-3 group-hover:text-orange-500 transition-colors uppercase tracking-tighter loading-none">
+                <h3 className="text-3xl font-black text-white mb-3 group-hover:text-emerald-200 transition-colors uppercase tracking-tighter loading-none">
                     {service.title}
                 </h3>
 
-                <p className="text-zinc-300 text-sm leading-relaxed mb-6 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
+                <p className="text-zinc-100 text-sm leading-relaxed mb-6 line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
                     {service.description}
                 </p>
 
                 {/* Features List (Visible on Hover) */}
-                <ul className="space-y-2 mb-6 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-xs font-semibold text-zinc-400">
+                <ul className="space-y-2 mb-6 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-xs font-semibold text-emerald-100">
                     {service.features.map((feature: string, idx: number) => (
                         <li key={idx} className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                             {feature}
                         </li>
                     ))}
                 </ul>
 
                 <Link href="/contact" className="w-full">
-                    <button className="w-full py-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 text-white font-bold text-sm tracking-wide uppercase flex items-center justify-center gap-2 hover:bg-orange-600 hover:border-orange-600 transition-all">
-                        Get Quote <ArrowUpRight size={16} />
+                    <button className="w-full py-3 rounded-xl bg-[#1e1b4b] text-white font-black text-sm tracking-wide uppercase flex items-center justify-center gap-2 hover:bg-[#4ACF50] hover:text-[#1e1b4b] border-2 border-white hover:border-[#1e1b4b] transition-all shadow-lg">
+                        Get Quote <ArrowUpRight size={18} />
                     </button>
                 </Link>
             </div>
@@ -173,13 +173,16 @@ const ServiceCard = ({ service }: { service: any }) => {
 
 export default function ServicesPage() {
     return (
-        <div className="bg-zinc-950 min-h-screen pt-24 pb-20">
+        <div className="bg-white min-h-screen pt-24 pb-20 relative overflow-hidden">
+            {/* Background Blobs */}
+            <div className="absolute top-20 left-[-100px] w-[600px] h-[600px] bg-[#E91E63]/10 rounded-full blur-[120px]" />
+            <div className="absolute bottom-20 right-[-100px] w-[500px] h-[500px] bg-[#4ACF50]/15 rounded-full blur-[120px]" />
             {/* HEADER */}
-            <div className="container mx-auto px-6 text-center mb-20">
+            <div className="container mx-auto px-6 text-center mb-20 relative z-10">
                 <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="inline-block py-1 px-3 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-bold tracking-[0.2em] uppercase mb-6"
+                    className="inline-block py-2 px-6 rounded-full bg-[#E91E63] text-white border-[3px] border-[#1e1b4b] text-xs font-black tracking-[0.2em] uppercase mb-6 shadow-[4px_4px_0px_0px_#1e1b4b] transform -rotate-1"
                 >
                     What We Do By Heart
                 </motion.span>
@@ -187,15 +190,15 @@ export default function ServicesPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-6"
+                    className="text-4xl md:text-7xl font-black text-[#1e1b4b] tracking-tighter mb-6"
                 >
-                    Catering Solutions <br /> For <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-600">Every Need</span>
+                    Catering Solutions <br /> For <span className="text-[#4ACF50] text-shadow-sm">Every Need</span>
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="text-zinc-400 text-lg max-w-2xl mx-auto"
+                    className="text-[#1e1b4b]/70 text-lg max-w-2xl mx-auto font-bold"
                 >
                     From student hostels to corporate boardrooms, we bring the same level of passion, hygiene, and taste to every plate we serve.
                 </motion.p>
@@ -226,16 +229,16 @@ export default function ServicesPage() {
                 viewport={{ once: true }}
                 className="container mx-auto px-6 mt-32"
             >
-                <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-12 text-center relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/10 rounded-full blur-[80px]" />
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-zinc-700/10 rounded-full blur-[80px]" />
+                <div className="bg-[#4ACF50] border-[4px] border-[#1e1b4b] rounded-[3rem] p-12 text-center relative overflow-hidden shadow-[12px_12px_0px_0px_#1e1b4b]">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-white blur-[100px] opacity-20" />
+                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-white blur-[100px] opacity-20" />
 
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 relative z-10">Can't find what you're looking for?</h2>
-                    <p className="text-zinc-400 max-w-xl mx-auto mb-8 relative z-10">
+                    <h2 className="text-3xl md:text-5xl font-black text-[#1e1b4b] mb-6 relative z-10 drop-shadow-sm">Can't find what you're looking for?</h2>
+                    <p className="text-[#1e1b4b] text-xl font-bold max-w-xl mx-auto mb-8 relative z-10">
                         We specialize in custom catering solutions. Reach out to us with your specific requirements, and we'll tailor a plan just for you.
                     </p>
                     <Link href="/contact" className="relative z-10">
-                        <button className="bg-white text-zinc-950 px-8 py-3 rounded-full font-bold hover:bg-orange-500 hover:text-white transition-all duration-300">
+                        <button className="bg-[#1e1b4b] text-white px-10 py-4 rounded-full font-black shadow-[6px_6px_0px_0px_#ffffff] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#ffffff] transition-all border-2 border-white text-lg">
                             Talk to an Expert
                         </button>
                     </Link>

@@ -54,15 +54,13 @@ export default function Navbar() {
                     height: isScrollingDown ? "52px" : "72px",
                     borderRadius: isScrollingDown ? "9999px" : "24px",
                     backgroundColor: isScrolled
-                        ? "rgba(255, 255, 255, 0.75)"
-                        : "rgba(255, 255, 255, 1)",
-                    backdropFilter: isScrolled ? "blur(16px)" : "blur(0px)",
-                    border: isScrolled
-                        ? "1px solid rgba(255, 255, 255, 0.3)"
-                        : "1px solid rgba(0, 0, 0, 0.05)",
+                        ? "rgba(255, 255, 255, 0.85)"
+                        : "rgba(255, 255, 255, 0.5)",
+                    backdropFilter: "blur(12px)",
+                    border: "2px solid #1e1b4b",
                     boxShadow: isScrolled
-                        ? "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)"
-                        : "0 4px 6px -1px rgba(0, 0, 0, 0.02)",
+                        ? "4px 4px 0px 0px #1e1b4b"
+                        : "none",
                 }}
                 transition={{
                     type: "spring",
@@ -70,7 +68,7 @@ export default function Navbar() {
                     damping: 30,
                     mass: 1,
                 }}
-                className="pointer-events-auto flex items-center justify-between px-1 md:px-2 overflow-hidden text-zinc-900 border"
+                className="pointer-events-auto flex items-center justify-between px-1 md:px-2 overflow-hidden text-[#1e1b4b] border"
             >
                 {/* LOGO SECTION */}
                 <AnimatePresence mode="popLayout">
@@ -99,12 +97,12 @@ export default function Navbar() {
                             <motion.div
                                 whileHover={{ rotate: 15, scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                className="bg-orange-600 p-2 rounded-xl text-white shadow-lg shadow-orange-200 cursor-pointer shrink-0"
+                                className="bg-[#4ACF50] p-2 rounded-xl text-[#1e1b4b] shadow-[2px_2px_0px_0px_#1e1b4b] border-2 border-[#1e1b4b] cursor-pointer shrink-0"
                             >
                                 <UtensilsCrossed size={22} className="stroke-[2.5px]" />
                             </motion.div>
-                            <span className="text-xl font-black tracking-tighter text-zinc-900 hidden sm:block">
-                                DELHI <span className="text-orange-600">DELLIGHT</span>
+                            <span className="text-xl font-black tracking-tighter text-[#1e1b4b] hidden sm:block">
+                                DELHI <span className="text-[#4ACF50] text-shadow-sm">DELIGHT</span>
                             </span>
                         </motion.div>
                     )}
@@ -126,7 +124,7 @@ export default function Navbar() {
                             >
                                 <Link
                                     href={link.href}
-                                    className={`text-sm font-semibold transition-colors py-2 px-4 rounded-full hover:bg-zinc-100 ${isScrollingDown ? 'text-zinc-700' : 'text-zinc-600'
+                                    className={`text-sm font-semibold transition-colors py-2 px-4 rounded-full hover:bg-emerald-50 hover:text-amber-600 ${isScrollingDown ? 'text-zinc-950' : 'text-zinc-900'
                                         }`}
                                 >
                                     {link.name}
@@ -145,7 +143,7 @@ export default function Navbar() {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                                 transition={{ type: "spring", stiffness: 500, damping: 15 }}
-                                className="md:hidden p-2 hover:bg-zinc-100 rounded-full transition-colors"
+                                className="md:hidden p-2 hover:bg-emerald-50 text-emerald-800 rounded-full transition-colors"
                                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             >
                                 {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -179,9 +177,9 @@ export default function Navbar() {
                             className="hidden md:block shrink-0 mr-4 md:mr-6 overflow-hidden whitespace-nowrap"
                         >
                             <motion.button
-                                whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(234, 88, 12, 0.3)" }}
+                                whileHover={{ scale: 1.05, boxShadow: "4px 4px 0px 0px #1e1b4b" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-zinc-900 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-orange-600 transition-all font-mono"
+                                className="bg-[#E91E63] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-[#D81B60] transition-all font-mono border-2 border-[#1e1b4b] shadow-[2px_2px_0px_0px_#1e1b4b]"
                             >
                                 Get Started
                             </motion.button>
@@ -198,7 +196,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
                         exit={{ opacity: 0, y: -20, scale: 0.9, filter: "blur(10px)" }}
                         transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        className="fixed top-24 left-4 right-4 bg-white/95 backdrop-blur-2xl border border-zinc-200/50 rounded-3xl p-8 shadow-2xl flex flex-col gap-6 md:hidden pointer-events-auto"
+                        className="fixed top-24 left-4 right-4 bg-white/95 backdrop-blur-2xl border border-emerald-100 rounded-3xl p-8 shadow-2xl flex flex-col gap-6 md:hidden pointer-events-auto"
                     >
                         <div className="flex flex-col gap-2">
                             {navLinks.map((link, i) => (
@@ -211,18 +209,18 @@ export default function Navbar() {
                                     <Link
                                         href={link.href}
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className="text-2xl font-bold text-zinc-800 hover:text-orange-600 transition-colors py-2 block"
+                                        className="text-2xl font-bold text-[#1e1b4b] hover:text-[#4ACF50] transition-colors py-2 block"
                                     >
                                         {link.name}
                                     </Link>
                                 </motion.div>
                             ))}
                         </div>
-                        <div className="h-px bg-zinc-100 w-full" />
+                        <div className="h-px bg-emerald-100 w-full" />
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="w-full bg-orange-600 text-white py-5 rounded-2xl font-black text-lg shadow-xl shadow-orange-200 transition-all"
+                            className="w-full bg-[#4ACF50] text-[#1e1b4b] py-5 rounded-2xl font-black text-lg shadow-[4px_4px_0px_0px_#1e1b4b] border-2 border-[#1e1b4b] transition-all"
                         >
                             GET STARTED
                         </motion.button>

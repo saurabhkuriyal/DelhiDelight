@@ -46,8 +46,8 @@ const services = [
     color: "bg-emerald-500",
   },
   {
-    title: "PG Catering",
-    description: "Monthly meal plans for PGs with a focus on variety, health, and doorstep delivery.",
+    title: "Hospital Catering",
+    description: "Also provide Healthy meals to hospital maintaining proper hygiene and nutritional standards ",
     icon: <Coffee size={32} />,
     color: "bg-lime-500",
   }
@@ -56,7 +56,7 @@ const services = [
 const stories = [
   {
     id: 1,
-    title: "The Art of Fusion Cooking",
+    title: "The Art of Authentic Indian Cooking",
     excerpt: "Discover how we blend traditional spices with modern techniques to create unique flavors.",
     image: "https://images.unsplash.com/photo-1547573854-74d2a71d0827?q=80&w=2040&auto=format&fit=crop",
     date: "Jan 25, 2026",
@@ -131,7 +131,7 @@ export default function Home() {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <span className="inline-block px-6 py-2 rounded-full bg-[#4ACF50] text-[#1e1b4b] border-[3px] border-white text-sm font-black tracking-widest uppercase mb-6 shadow-[4px_4px_0px_0px_rgba(30,27,75,1)] transform -rotate-2">
-              Welcome to Delhi Delight Caterers
+              Welcome to Delhi Delight
             </span>
             <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter mb-8 leading-[1.1]">
               {heroSlides[currentSlide].title.split(" ").map((word, i) => (

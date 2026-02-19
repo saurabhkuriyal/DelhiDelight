@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { Menu, UtensilsCrossed, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -92,14 +92,18 @@ export default function Navbar() {
                                 width: 0,
                                 transition: { duration: 0.2, ease: "easeInOut" }
                             }}
-                            className="flex items-center gap-3 shrink-0 ml-4 md:ml-6 overflow-hidden whitespace-nowrap"
+                            className="flex items-center gap-3 shrink-0 ml-4 md:ml-6 overflow-visible whitespace-nowrap"
                         >
                             <motion.div
                                 whileHover={{ rotate: 15, scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                className="bg-[#4ACF50] p-2 rounded-xl text-[#1e1b4b] shadow-[2px_2px_0px_0px_#1e1b4b] border-2 border-[#1e1b4b] cursor-pointer shrink-0"
+                                className="bg-[#FFFFFF] p-2 rounded-xl text-[#1e1b4b] shadow-[2px_2px_0px_0px_#1e1b4b] border-2 border-[#1e1b4b] cursor-pointer shrink-0"
                             >
-                                <UtensilsCrossed size={22} className="stroke-[2.5px]" />
+                                <img
+                                    src="/logo.webp"
+                                    alt="Logo"
+                                    className="w-8 h-8 object-contain"
+                                />
                             </motion.div>
                             <span className="text-xl font-black tracking-tighter text-[#1e1b4b] hidden sm:block">
                                 DELHI <span className="text-[#4ACF50] text-shadow-sm">DELIGHT</span>

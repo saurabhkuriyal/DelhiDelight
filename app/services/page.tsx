@@ -25,8 +25,8 @@ const services = [
     },
     {
         id: 2,
-        title: "PG Catering Services",
-        description: "Reliable daily meals services for Paying Guest accommodations. Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
+        title: "Hospital Catering Services",
+        description: "Reliable daily meals services for Hospital  . Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
         icon: Building2,
         image: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=2000&auto=format&fit=crop", // Warm meal
         features: ["Homely Taste", "Breakfast & Dinner Plans", "Sunday Specials"]
@@ -49,16 +49,16 @@ const services = [
     },
     {
         id: 5,
-        title: "Industrial Catering",
-        description: "Large-scale food solutions for factories and industrial plants. High-calorie, satisfying meals focusing on food safety and hygiene.",
+        title: "University/College Cafeteria ",
+        description: "With maintaining every standards of hygiene and quality we provide the best food to the students.",
         icon: ChefHat,
         image: "https://images.unsplash.com/photo-1577103239843-f617a2dc63fb?q=80&w=2050&auto=format&fit=crop", // Large pot cooking
         features: ["24/7 Shift Operations", "Cost-Effective", "ISO Certified Process"]
     },
     {
         id: 6,
-        title: "Bulk Tiffin Service",
-        description: "Premium packed meal boxes for offices, sets, or large gatherings. Hot, fresh, and securely packed for easy consumption anywhere.",
+        title: "School Canteen Services",
+        description: "With a wide reach in school in NCT Delhi we can assure our canteen servide to your children",
         icon: Truck,
         image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=1974&auto=format&fit=crop", // Tiffin/Bento
         features: ["Leak-Proof Packaging", "Customizable Box", "On-Time Delivery"]

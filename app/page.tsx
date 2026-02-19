@@ -1,5 +1,6 @@
 "use client";
 
+import Clients from "@/components/custom/Clients";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
@@ -343,6 +344,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+      {/* CLIENTS SECTION */}
+      <Clients />
 
       {/* FOOTER CTA */}
       <section className="py-24 text-center">

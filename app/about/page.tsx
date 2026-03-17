@@ -195,7 +195,7 @@ export default function AboutPage() {
                             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[12px_12px_0px_0px_#1e1b4b] border-[4px] border-[#1e1b4b] group bg-white">
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e1b4b]/80 to-transparent z-10" />
                                 {/* Placeholder for chef/kitchen image */}
-                                <div className="absolute inset-0 bg-white bg-[url('https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1977&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
+                                <div className="absolute inset-0 bg-white bg-[url('/Chef.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" />
 
                                 <div className="absolute bottom-0 left-0 p-8 z-20">
                                     <p className="text-white font-serif text-2xl italic">"We cook with soul, serve with love."</p>

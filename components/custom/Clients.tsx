@@ -10,37 +10,47 @@ const clients = [
     },
     {
         name: "Tech Institute of Delhi",
-        logo: "https://placehold.co/200x200/ffffff/E91E63?text=Tech+Inst",
+        logo: "/Holy_Child.webp ",
         color: "bg-pink-100"
     },
     {
         name: "National Medical College",
-        logo: "https://placehold.co/200x200/ffffff/4ACF50?text=Med+Col",
+        logo: "/ITS_Dental_GN.jpg",
         color: "bg-green-100"
     },
     {
         name: "Arts & Design Academy",
-        logo: "https://placehold.co/200x200/ffffff/FF9800?text=Arts+Acad",
+        logo: "/ITS_Engineering_College.webp",
         color: "bg-orange-100"
     },
     {
         name: "Global Business School",
-        logo: "https://placehold.co/200x200/ffffff/6366f1?text=Bus+Sch",
+        logo: "/ITS_Mohan_Nagar.png",
         color: "bg-indigo-100"
     },
     {
         name: "Institute of Law",
-        logo: "https://placehold.co/200x200/ffffff/8b5cf6?text=Law+Inst",
+        logo: "/MERI.png",
         color: "bg-violet-100"
     },
     {
         name: "Science Research Center",
-        logo: "https://placehold.co/200x200/ffffff/06b6d4?text=Sci+Res",
+        logo: "NIIMS-imag.jpg",
         color: "bg-cyan-100"
     },
     {
         name: "Engineering Campus",
-        logo: "https://placehold.co/200x200/ffffff/f43f5e?text=Eng+Camp",
+        logo: "/nkbps.webp",
+        color: "bg-rose-100"
+    },
+    {
+        name: "Engineering Campus",
+        logo: "/pdmu.png",
+        color: "bg-rose-100"
+    },
+    {
+        name: "Engineering Campus",
+        logo: "/Ramakrishna.png",
         color: "bg-rose-100"
     },
 ];

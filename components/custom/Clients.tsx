@@ -10,7 +10,7 @@ const clients = [
     },
     {
         name: "Tech Institute of Delhi",
-        logo: "/Holy_Child.webp ",
+        logo: "/holy_child_sonipat.png ",
         color: "bg-pink-100"
     },
     {
@@ -25,7 +25,7 @@ const clients = [
     },
     {
         name: "Global Business School",
-        logo: "/ITS_Mohan_Nagar.png",
+        logo: "/ITS_Ghaziabad.png",
         color: "bg-indigo-100"
     },
     {
@@ -45,12 +45,22 @@ const clients = [
     },
     {
         name: "Engineering Campus",
-        logo: "/pdmu.png",
+        logo: "/PDM_University_logo.svg",
         color: "bg-rose-100"
     },
     {
         name: "Engineering Campus",
         logo: "/Ramakrishna.png",
+        color: "bg-rose-100"
+    },
+    {
+        name: "Pt deen dayal upadhyay",
+        logo: "/deen_dayal.avif",
+        color: "bg-rose-100"
+    },
+    {
+        name: "Pt deen dayal upadhyay",
+        logo: "/ICARE.png",
         color: "bg-rose-100"
     },
 ];

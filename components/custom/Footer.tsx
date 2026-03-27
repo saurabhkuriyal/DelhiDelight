@@ -79,13 +79,13 @@ export default function Footer() {
                                 <div className="mt-1 p-2 rounded-full bg-white border border-emerald-100 group-hover:border-amber-500/50 group-hover:text-amber-600 transition-colors">
                                     <MapPin size={16} />
                                 </div>
-                                <span className="text-sm">123, Flavor Avenue, Connaught Place, New Delhi - 110001</span>
+                                <span className="text-sm">8th floor, 811, vikas deep building, Laxmi Nagar, Delhi - 110092</span>
                             </li>
                             <li className="flex items-center gap-4 text-zinc-600 group">
                                 <div className="p-2 rounded-full bg-white border border-emerald-100 group-hover:border-amber-500/50 group-hover:text-amber-600 transition-colors">
                                     <Phone size={16} />
                                 </div>
-                                <span className="text-sm">+91 98765 43210</span>
+                                <span className="text-sm">+91 9811228623</span>
                             </li>
                             <li className="flex items-center gap-4 text-zinc-600 group">
                                 <div className="p-2 rounded-full bg-white border border-emerald-100 group-hover:border-amber-500/50 group-hover:text-amber-600 transition-colors">

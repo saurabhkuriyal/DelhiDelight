@@ -59,7 +59,7 @@ const stories = [
     id: 1,
     title: "The Art of Authentic Indian Cooking",
     excerpt: "Discover how we blend traditional spices with modern techniques to create unique flavors.",
-    image: "https://images.unsplash.com/photo-1547573854-74d2a71d0827?q=80&w=2040&auto=format&fit=crop",
+    image: "/chef-home.png",
     date: "Jan 25, 2026",
   },
   {
@@ -318,7 +318,7 @@ export default function Home() {
                   "Punctual & Reliable Service Each Time",
                   "Strict Adherence to Food Safety & Hygiene",
                   "Customized Menus for Every Culture & Budget",
-                  "Passionate Team of Culinary Experts"
+                  "Passionate Team for providing best service"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 text-[#1e1b4b]">
                     <div className="bg-white p-1 rounded-full">

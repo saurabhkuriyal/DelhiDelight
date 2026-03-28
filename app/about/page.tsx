@@ -255,8 +255,8 @@ export default function AboutPage() {
                         />
                         <ValueCard
                             icon={ChefHat}
-                            title="Master Chefs"
-                            description="Our culinary team executes traditional recipes with modern precision and flair."
+                            title="Multi-Cuisine"
+                            description="We offer a wide range of cuisines to choose from, including Indian, Chinese, Continental, and more."
                             delay={0.3}
                         />
                         <ValueCard
@@ -274,9 +274,9 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-10" />
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                        <AnimatedStat value={25} suffix="+" label="Years of Legacy" />
-                        <AnimatedStat value={1500} suffix="+" label="Weddings Direct" />
-                        <AnimatedStat value={500} suffix="k+" label="Happy Guests" />
+                        <AnimatedStat value={20} suffix="+" label="Years of Legacy" />
+                        <AnimatedStat value={100} suffix="+" label="Institutions" />
+                        <AnimatedStat value={1500} suffix="k+" label="Happy Students" />
                         <AnimatedStat value={45} suffix="" label="Awards Won" />
                     </div>
                 </div>
@@ -300,7 +300,7 @@ export default function AboutPage() {
                             <span className="text-[#1e1b4b] text-shadow-sm">Difference?</span>
                         </h2>
                         <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12 font-bold">
-                            From intimate gatherings to royal weddings, let us create a menu that your guests will talk about for years.
+                            From institutions to corporate events, let us create a menu that your guests will remember for years.
                         </p>
 
                         <Link href="/contact">

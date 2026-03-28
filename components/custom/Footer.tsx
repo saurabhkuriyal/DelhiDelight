@@ -91,7 +91,7 @@ export default function Footer() {
                                 <div className="p-2 rounded-full bg-white border border-emerald-100 group-hover:border-amber-500/50 group-hover:text-amber-600 transition-colors">
                                     <Mail size={16} />
                                 </div>
-                                <span className="text-sm">hello@delhidelight.com</span>
+                                <span className="text-sm">contact@delhidelight.com</span>
                             </li>
                         </ul>
                     </div>

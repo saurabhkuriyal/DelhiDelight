@@ -88,7 +88,7 @@ export default function ContactPage() {
                             <InfoCard
                                 icon={Mail}
                                 title="Email Us"
-                                content="hello@delhidelight.com"
+                                content="contact@delhidelight.com"
                                 subContent="bookings@delhidelight.com"
                             />
                             <InfoCard

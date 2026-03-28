@@ -154,7 +154,7 @@ export default function ContactPage() {
                                     onChange={handleChange}
                                 />
                                 <div className="space-y-2">
-                                    <label className="text-sm font-black text-[#1e1b4b] ml-1 uppercase tracking-wide">Event Type</label>
+                                    <label className="text-sm font-black text-[#1e1b4b] ml-1 uppercase tracking-wide">Service you want</label>
                                     <div className="relative">
                                         <select
                                             name="eventType"
@@ -165,8 +165,8 @@ export default function ContactPage() {
                                             <option value="" disabled>Select Event Type</option>
                                             <option value="wedding">Wedding / Reception</option>
                                             <option value="corporate">Corporate Event</option>
-                                            <option value="birthday">Birthday Party</option>
-                                            <option value="social">Social Gathering</option>
+                                            <option value="birthday">College/School Mess</option>
+                                            <option value="social">Hospital Mess</option>
                                             <option value="other">Other</option>
                                         </select>
                                         <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#1e1b4b]">
@@ -188,7 +188,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="mb-8">
-                                <label className="text-sm font-black text-[#1e1b4b] ml-1 mb-2 block uppercase tracking-wide">Tell us about your event</label>
+                                <label className="text-sm font-black text-[#1e1b4b] ml-1 mb-2 block uppercase tracking-wide">Any other details</label>
                                 <textarea
                                     name="message"
                                     value={formState.message}

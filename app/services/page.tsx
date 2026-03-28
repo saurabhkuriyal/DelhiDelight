@@ -20,7 +20,7 @@ const services = [
         title: "Hostel Mess Management",
         description: "Nutritious, hygienic, and homely meals designed for growing students. We ensure a balanced diet that keeps energy high and tastes like home.",
         icon: GraduationCap,
-        image: "https://images.unsplash.com/photo-1548943487-a2e4e43b485c?q=80&w=2070&auto=format&fit=crop", // Student cafeteria
+        image: "/mess.jpg", // Student cafeteria
         features: ["Balanced Macronutrients", "Monthly Menu Rotation", "Late Night Snacks"]
     },
     {
@@ -52,7 +52,7 @@ const services = [
         title: "University/College Cafeteria ",
         description: "With maintaining every standards of hygiene and quality we provide the best food to the students.",
         icon: ChefHat,
-        image: "https://images.unsplash.com/photo-1577103239843-f617a2dc63fb?q=80&w=2050&auto=format&fit=crop", // Large pot cooking
+        image: "/cafeteria.jpg", // Large pot cooking
         features: ["24/7 Shift Operations", "Cost-Effective", "ISO Certified Process"]
     },
     {

@@ -9,7 +9,7 @@ const galleryItems = [
         id: 1,
         title: "Royal Wedding Buffet",
         category: "Wedding",
-        image: "https://images.unsplash.com/photo-1519225427186-1db89e9309cf?q=80&w=2070&auto=format&fit=crop",
+        image: "/royalIndian.jpg",
         height: "h-[400px]"
     },
     {
@@ -37,7 +37,7 @@ const galleryItems = [
         id: 5,
         title: "Traditional Thali",
         category: "Indian",
-        image: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=2070&auto=format&fit=crop",
+        image: "/indiaThali.jpg",
         height: "h-[450px]"
     },
     {
@@ -51,7 +51,7 @@ const galleryItems = [
         id: 7,
         title: "Outdoor Catering Setup",
         category: "Events",
-        image: "https://images.unsplash.com/photo-1464349153912-6b7b5a0e913a?q=80&w=2070&auto=format&fit=crop",
+        image: "/outdoor-catering-service.jpg",
         height: "h-[500px]"
     },
     {

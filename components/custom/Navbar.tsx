@@ -105,7 +105,7 @@ export default function Navbar() {
                                     className="w-8 h-8 object-contain"
                                 />
                             </motion.div>
-                            <span className="text-xl font-black tracking-tighter text-[#1e1b4b] hidden sm:block">
+                            <span className="text-xl font-black tracking-tighter text-[#00703C] hidden sm:block">
                                 DELHI <span className="text-[#4ACF50] text-shadow-sm">DELIGHT</span>
                             </span>
                         </motion.div>

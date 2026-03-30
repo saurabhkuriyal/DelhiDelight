@@ -334,7 +334,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="relative rounded-[64px] overflow-hidden shadow-[12px_12px_0px_0px_#1e1b4b] border-[4px] border-[#1e1b4b]">
-                <img src="https://images.unsplash.com/photo-1567521463850-4939134bcd4a?q=80&w=1974&auto=format&fit=crop" alt="Canteen" className="w-full h-[600px] object-cover" />
+                <img src="/delight-home.png" alt="Canteen" className="w-full h-[600px] object-cover" />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-[#FF9800] p-8 rounded-[40px] text-[#1e1b4b] shadow-[8px_8px_0px_0px_#1e1b4b] border-[3px] border-[#1e1b4b] max-w-[280px]">
                 <div className="text-5xl font-black text-white mb-2 drop-shadow-md">15+</div>

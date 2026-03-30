@@ -116,7 +116,7 @@ export default function AboutPage() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-5xl md:text-8xl font-black text-[#1e1b4b] tracking-tighter mb-6 leading-tight drop-shadow-sm"
+                        className="text-5xl md:text-8xl font-black text-[#00703C] tracking-tighter mb-6 leading-tight drop-shadow-sm"
                     >
                         CRAFTING <br />
                         <span className="text-[#4ACF50] text-shadow-sm">

@@ -276,7 +276,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         <AnimatedStat value={20} suffix="+" label="Years of Legacy" />
                         <AnimatedStat value={100} suffix="+" label="Institutions" />
-                        <AnimatedStat value={1500} suffix="k+" label="Happy Students" />
+                        <AnimatedStat value={15000} suffix="+" label="Happy Students" />
                         <AnimatedStat value={45} suffix="" label="Awards Won" />
                     </div>
                 </div>

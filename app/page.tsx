@@ -74,7 +74,7 @@ const stories = [
 const testimonials = [
   {
     name: "Dr. Ananya Sharma",
-    role: "Director, City University",
+    role: "Director, MERI College",
     text: "Delhi Delight has transformed our campus dining experience. The students are happy, and the quality is consistently high.",
     rating: 5,
   },

@@ -36,7 +36,7 @@ const services = [
         title: "Hospital Catering Services",
         description: "Reliable daily meals services for Hospital  . Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
         icon: Building2,
-        image: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=2000&auto=format&fit=crop", // Warm meal
+        image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop", // Warm meal
         features: ["Homely Taste", "Breakfast & Dinner Plans", "Sunday Specials"]
     },
     {
@@ -44,7 +44,8 @@ const services = [
         title: "Corporate Cafeterias",
         description: "Fueling the workforce with professional cafeteria management. From power breakfasts to executive lunches, we handle it all.",
         icon: Briefcase,
-        image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=2070&auto=format&fit=crop", // Healthy lunch
+
+        image: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=2000&auto=format&fit=crop", // Healthy lunch
         features: ["Live Counters", "Health-Conscious Options", "Tea/Coffee Vending"]
     },
     {

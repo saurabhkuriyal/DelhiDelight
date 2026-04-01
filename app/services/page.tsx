@@ -17,14 +17,22 @@ import React, { useRef } from "react";
 const services = [
     {
         id: 1,
-        title: "Hostel Mess Management",
+        title: "University / College / School Mess",
         description: "Nutritious, hygienic, and homely meals designed for growing students. We ensure a balanced diet that keeps energy high and tastes like home.",
         icon: GraduationCap,
         image: "/mess.jpg", // Student cafeteria
-        features: ["Balanced Macronutrients", "Monthly Menu Rotation", "Late Night Snacks"]
+        features: ["Balanced Macronutrients"]
     },
     {
         id: 2,
+        title: "University / College / School Cafeteria ",
+        description: "With maintaining every standards of hygiene and quality we provide the best food to the students.",
+        icon: ChefHat,
+        image: "/cafeteria.jpg", // Large pot cooking
+        features: ["24/7 Shift Operations", "Cost-Effective", "ISO Certified Process"]
+    },
+    {
+        id: 3,
         title: "Hospital Catering Services",
         description: "Reliable daily meals services for Hospital  . Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
         icon: Building2,
@@ -32,7 +40,7 @@ const services = [
         features: ["Homely Taste", "Breakfast & Dinner Plans", "Sunday Specials"]
     },
     {
-        id: 3,
+        id: 4,
         title: "Corporate Cafeterias",
         description: "Fueling the workforce with professional cafeteria management. From power breakfasts to executive lunches, we handle it all.",
         icon: Briefcase,
@@ -40,28 +48,20 @@ const services = [
         features: ["Live Counters", "Health-Conscious Options", "Tea/Coffee Vending"]
     },
     {
-        id: 4,
-        title: "Wedding & Events",
-        description: "Our signature luxury catering for your special day. Exquisite menus, royal presentation, and service that treats guests like royalty.",
-        icon: Utensils,
-        image: "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070&auto=format&fit=crop", // Banquet
-        features: ["Multi-Cuisine Menu", "Silver Service", "Themed Stalls"]
-    },
-    {
         id: 5,
-        title: "University/College Cafeteria ",
-        description: "With maintaining every standards of hygiene and quality we provide the best food to the students.",
-        icon: ChefHat,
-        image: "/cafeteria.jpg", // Large pot cooking
-        features: ["24/7 Shift Operations", "Cost-Effective", "ISO Certified Process"]
-    },
-    {
-        id: 6,
-        title: "School Canteen Services",
+        title: "Private Events",
         description: "With a wide reach in school in NCT Delhi we can assure our canteen servide to your children",
         icon: Truck,
         image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=1974&auto=format&fit=crop", // Tiffin/Bento
         features: ["Leak-Proof Packaging", "Customizable Box", "On-Time Delivery"]
+    },
+    {
+        id: 6,
+        title: "Destination Wedding",
+        description: "Our signature luxury catering for your special day. Exquisite menus, royal presentation, and service that treats guests like royalty.",
+        icon: Utensils,
+        image: "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=2070&auto=format&fit=crop", // Banquet
+        features: ["Multi-Cuisine Menu", "Silver Service", "Themed Stalls"]
     },
 ];
 

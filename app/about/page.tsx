@@ -277,7 +277,7 @@ export default function AboutPage() {
                         <AnimatedStat value={20} suffix="+" label="Years of Legacy" />
                         <AnimatedStat value={100} suffix="+" label="Institutions" />
                         <AnimatedStat value={15000} suffix="+" label="Happy Students" />
-                        <AnimatedStat value={45} suffix="" label="Awards Won" />
+                        <AnimatedStat value={35} suffix="%" label="Yearly Growth" />
                     </div>
                 </div>
             </section>

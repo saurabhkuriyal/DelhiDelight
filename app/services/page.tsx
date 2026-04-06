@@ -17,6 +17,7 @@ import React, { useRef } from "react";
 const services = [
     {
         id: 1,
+        link:"Mess",
         title: "University / College / School Mess",
         description: "Nutritious, hygienic, and homely meals designed for growing students. We ensure a balanced diet that keeps energy high and tastes like home.",
         icon: GraduationCap,
@@ -25,6 +26,7 @@ const services = [
     },
     {
         id: 2,
+        link:"cafeteria",
         title: "University / College / School Cafeteria ",
         description: "With maintaining every standards of hygiene and quality we provide the best food to the students.",
         icon: ChefHat,
@@ -33,6 +35,7 @@ const services = [
     },
     {
         id: 3,
+        link:"hospital",
         title: "Hospital Catering Services",
         description: "Reliable daily meals services for Hospital  . Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
         icon: Building2,
@@ -41,6 +44,7 @@ const services = [
     },
     {
         id: 4,
+        link:"corporate",
         title: "Corporate Cafeterias",
         description: "Fueling the workforce with professional cafeteria management. From power breakfasts to executive lunches, we handle it all.",
         icon: Briefcase,
@@ -50,6 +54,7 @@ const services = [
     },
     {
         id: 5,
+        link:"event",
         title: "Private Events",
         description: "With a wide reach in school in NCT Delhi we can assure our canteen servide to your children",
         icon: Truck,
@@ -58,6 +63,7 @@ const services = [
     },
     {
         id: 6,
+        link:"wedding",
         title: "Destination Wedding",
         description: "Our signature luxury catering for your special day. Exquisite menus, royal presentation, and service that treats guests like royalty.",
         icon: Utensils,
@@ -209,16 +215,20 @@ export default function ServicesPage() {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                     {services.map((service, index) => (
-                        <motion.div
+                        <Link href={`/services/${service.link}`}
                             key={service.id}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="flex justify-center"
                         >
-                            <ServiceCard service={service} />
-                        </motion.div>
+                            <motion.div
+
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                className="flex justify-center"
+                            >
+                                <ServiceCard service={service} />
+                            </motion.div>
+                        </Link>
                     ))}
                 </div>
             </div>

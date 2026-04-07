@@ -246,7 +246,11 @@ export default function ServicesPage() {
                     <p className="text-[#1e1b4b] text-xl font-bold max-w-xl mx-auto mb-8 relative z-10">
                         We specialize in custom catering solutions. Reach out to us with your specific requirements, and we'll tailor a plan just for you.
                     </p>
-                    <Link href="/contact" className="relative z-10">
+                    <Link
+                        href={`https://wa.me/${+919811228623}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative z-10">
                         <button className="bg-[#1e1b4b] text-white px-10 py-4 rounded-full font-black shadow-[6px_6px_0px_0px_#ffffff] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#ffffff] transition-all border-2 border-white text-lg">
                             Talk to an Expert
                         </button>

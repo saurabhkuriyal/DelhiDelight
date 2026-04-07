@@ -185,7 +185,13 @@ export default function Navbar() {
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-[#E91E63] text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-[#D81B60] transition-all font-mono border-2 border-[#1e1b4b] shadow-[2px_2px_0px_0px_#1e1b4b]"
                             >
-                                Get Started
+                                <Link
+                                    href={`https://wa.me/${+919811228623}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Get Started
+                                </Link>
                             </motion.button>
                         </motion.div>
                     )}

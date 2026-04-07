@@ -303,12 +303,15 @@ export default function AboutPage() {
                             From institutions to corporate events, let us create a menu that your guests will remember for years.
                         </p>
 
-                        <Link href="/contact">
+                        <Link href={`https://wa.me/${+919811228623}`}
+                            target="_blank"
+                            rel="noopener noreferrer">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-[#4ACF50] text-[#1e1b4b] px-10 py-5 rounded-full text-xl font-black shadow-[6px_6px_0px_0px_#1e1b4b] border-2 border-[#1e1b4b] flex items-center gap-3 mx-auto transition-all"
                             >
+
                                 Get a Quote <ArrowRight className="w-6 h-6" />
                             </motion.button>
                         </Link>
@@ -318,3 +321,4 @@ export default function AboutPage() {
         </div>
     );
 }
+

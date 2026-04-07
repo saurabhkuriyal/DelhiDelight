@@ -63,11 +63,11 @@ export default function Footer() {
                     <div>
                         <h4 className="text-zinc-950 font-bold text-lg mb-6">Services</h4>
                         <ul className="space-y-4">
-                            <FooterLink href="/services" label="Wedding Catering" />
-                            <FooterLink href="/services" label="Corporate Events" />
-                            <FooterLink href="/services" label="Birthday Parties" />
-                            <FooterLink href="/services" label="Live Stations" />
-                            <FooterLink href="/services" label="Food Delivery" />
+                            <FooterLink href="/services/wedding" label="Wedding Catering" />
+                            <FooterLink href="/services/corporate" label="Corporate Catering" />
+                            <FooterLink href="/services/event" label="Private Events" />
+                            <FooterLink href="/services/hospital" label="Hospital Catering" />
+                            <FooterLink href="/services/Mess" label="University/College Mess" />
                         </ul>
                     </div>
 

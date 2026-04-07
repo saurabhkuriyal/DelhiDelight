@@ -11,7 +11,6 @@ import {
     Users
 } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 const servicesList = [
     {
@@ -90,7 +89,7 @@ export default function CorporateServicesPage() {
                 >
                     {/* Decorative pattern */}
                     <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#ffffff 2px, transparent 2px)", backgroundSize: "30px 30px" }} />
-                    
+
                     <div className="relative z-10 max-w-2xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Sparkles className="text-[#FF9800]" size={28} />
@@ -102,7 +101,7 @@ export default function CorporateServicesPage() {
                             We believe that a well-fed team is a happy and productive team. Our corporate catering solutions are designed entirely around delivering maximum employee workplace satisfaction through deeply customized culinary excellence.
                         </p>
                     </div>
-                    
+
                     <div className="relative z-10 shrink-0">
                         <div className="w-32 h-32 bg-[#4ACF50] rounded-full border-[4px] border-white shadow-[6px_6px_0px_0px_#ffffff] flex items-center justify-center transform rotate-6 hover:rotate-0 transition-transform">
                             <Users size={56} className="text-white" />
@@ -122,20 +121,20 @@ export default function CorporateServicesPage() {
                     >
                         {/* Decorative Background Card */}
                         <div className="absolute inset-0 bg-[#FF9800] rounded-[3rem] transform -rotate-3 scale-105 border-[4px] border-[#1e1b4b] pointer-events-none" />
-                        
+
                         <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[3rem] border-[4px] border-[#1e1b4b] shadow-[12px_12px_0px_0px_#1e1b4b] overflow-hidden group bg-white">
                             <Image
-                                src="/indian_corporate_catering.png"
+                                src="/Corporate-1.png"
                                 alt="Professional Indian Corporate Catering Chef"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
                         </div>
-                        
+
                         {/* Floating Fun Element */}
                         <div className="absolute -bottom-8 -right-8 bg-[#E91E63] text-white border-[4px] border-[#1e1b4b] shadow-[6px_6px_0px_0px_#1e1b4b] w-40 h-40 rounded-full flex flex-col items-center justify-center font-black rotate-[15deg] z-20 hover:rotate-0 transition-transform cursor-default">
                             <span className="text-4xl leading-none block">100%</span>
-                            <span className="text-sm uppercase text-center leading-tight mt-1">Satisfaction<br/>Guaranteed</span>
+                            <span className="text-sm uppercase text-center leading-tight mt-1">Satisfaction<br />Guaranteed</span>
                         </div>
                     </motion.div>
 
@@ -149,9 +148,9 @@ export default function CorporateServicesPage() {
                         {servicesList.map((service, idx) => {
                             const Icon = service.icon;
                             const isDark = service.bg === "bg-[#1e1b4b]";
-                            
+
                             return (
-                                <motion.div 
+                                <motion.div
                                     key={idx}
                                     whileHover={{ scale: 1.02, x: 10 }}
                                     className={`${service.bg} rounded-3xl border-[4px] border-[#1e1b4b] p-6 shadow-[8px_8px_0px_0px_#1e1b4b] flex items-center gap-6 cursor-pointer transition-all`}

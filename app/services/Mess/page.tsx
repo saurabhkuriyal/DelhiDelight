@@ -128,7 +128,7 @@ export default function MessServicesPage() {
                         <div className="absolute inset-0 bg-[#E91E63] rounded-[3rem] transform rotate-3 scale-105 border-[4px] border-[#1e1b4b] pointer-events-none" />
                         <div className="relative w-full aspect-[4/3] rounded-[3rem] border-[4px] border-[#1e1b4b] shadow-[12px_12px_0px_0px_#1e1b4b] overflow-hidden group bg-white">
                             <Image
-                                src="/chef.png"
+                                src="/Hostel_mess.png"
                                 alt="Professional Chef Preparing Gourmet Salad"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"

@@ -30,7 +30,7 @@ const galleryItems = [
         id: 4,
         title: "Live Pasta Station",
         category: "Live Stalls",
-        image: "https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=2070&auto=format&fit=crop",
+        image: "/Pasta-1.png",
         height: "h-[350px]"
     },
     {

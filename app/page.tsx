@@ -145,9 +145,7 @@ export default function Home() {
               {heroSlides[currentSlide].subtitle}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button className="w-full sm:w-auto px-8 py-5 bg-[#4ACF50] text-[#1e1b4b] rounded-full font-black text-lg shadow-[6px_6px_0px_0px_rgba(30,27,75,1)] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_rgba(30,27,75,1)] transition-all flex items-center justify-center gap-2 group border-2 border-[#1e1b4b]">
-                Plan Your Event <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
+
               <button className="w-full sm:w-auto px-8 py-5 bg-white text-[#1e1b4b] rounded-full font-black text-lg shadow-[6px_6px_0px_0px_#E91E63] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#E91E63] transition-all flex items-center justify-center gap-2 border-2 border-[#1e1b4b]">
                 <Link href="/services">
                   Our Services
@@ -332,7 +330,7 @@ export default function Home() {
                 ))}
               </div>
               <button className="mt-12 bg-[#1e1b4b] text-white px-10 py-5 rounded-full font-black text-xl hover:scale-105 transition-transform shadow-[6px_6px_0px_0px_#ffffff] border-2 border-white">
-                Book a Tasting Session
+                Experience the best
               </button>
             </div>
             <div className="relative">
@@ -361,16 +359,18 @@ export default function Home() {
                 <ChefHat size={48} className="text-[#E91E63]" />
               </div>
               <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter mb-6 drop-shadow-sm">Ready to delight your guests?</h2>
+
               <p className="text-xl text-white/90 max-w-2xl mx-auto mb-12 font-bold">
                 Contact us today for a personalized quote and let's make your next event or mess service unforgettable.
               </p>
+
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="bg-[#4ACF50] text-[#1e1b4b] px-10 py-5 rounded-full font-black text-xl shadow-[6px_6px_0px_0px_#1e1b4b] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#1e1b4b] transition-all w-full sm:w-auto border-2 border-[#1e1b4b]">
-                  Get a Quote
-                </button>
-                <button className="bg-white text-[#1e1b4b] px-10 py-5 rounded-full font-black text-xl shadow-[6px_6px_0px_0px_#1e1b4b] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#1e1b4b] transition-all w-full sm:w-auto border-2 border-[#1e1b4b]">
-                  Contact Us
-                </button>
+
+                <Link href="/contact">
+                  <button className="bg-white text-[#1e1b4b] px-10 py-5 rounded-full font-black text-xl shadow-[6px_6px_0px_0px_#1e1b4b] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#1e1b4b] transition-all w-full sm:w-auto border-2 border-[#1e1b4b]">
+                    Contact Us
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

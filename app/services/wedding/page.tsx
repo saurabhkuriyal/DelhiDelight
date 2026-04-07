@@ -19,7 +19,6 @@ import {
     Wine
 } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 const weddingServices = [
     {
@@ -124,8 +123,8 @@ export default function WeddingServicesPage() {
                     className="bg-[#FF9800] w-full rounded-[3rem] border-[4px] border-[#1e1b4b] shadow-[12px_12px_0px_0px_#1e1b4b] p-8 md:p-12 mb-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 transform hover:-rotate-1 transition-transform"
                 >
                     {/* Decorative pattern */}
-                     <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "radial-gradient(#000000 2px, transparent 2px)", backgroundSize: "30px 30px" }} />
-                    
+                    <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: "radial-gradient(#000000 2px, transparent 2px)", backgroundSize: "30px 30px" }} />
+
                     <div className="relative z-10 max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Wine className="text-[#1e1b4b]" size={32} />
@@ -151,20 +150,20 @@ export default function WeddingServicesPage() {
                     >
                         {/* Decorative Background Card */}
                         <div className="absolute inset-0 bg-[#E91E63] rounded-[3rem] transform -rotate-2 scale-105 border-[4px] border-[#1e1b4b] pointer-events-none" />
-                        
+
                         <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[3rem] border-[4px] border-[#1e1b4b] shadow-[12px_12px_0px_0px_#1e1b4b] overflow-hidden group bg-white">
                             <Image
-                                src="/indian_wedding_catering.png"
+                                src="/wedding-1.png"
                                 alt="Luxurious Indian Wedding Catering Spread"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
-                            
+
                             <div className="absolute top-6 left-6 bg-[#4ACF50] text-[#1e1b4b] border-[3px] border-[#1e1b4b] shadow-[4px_4px_0px_0px_#1e1b4b] rounded-full p-4 flex items-center justify-center transform group-hover:rotate-12 transition-transform">
                                 <Camera size={28} />
                             </div>
                         </div>
-                        
+
                         {/* Floating Event Fun Element */}
                         <div className="absolute -bottom-6 -right-6 bg-white text-[#1e1b4b] border-[4px] border-[#1e1b4b] shadow-[8px_8px_0px_0px_#E91E63] p-6 rounded-3xl flex items-center gap-4 rotate-[5deg] z-20 hover:rotate-0 transition-transform cursor-default">
                             <div className="bg-[#FF9800] p-3 rounded-xl border-[2px] border-[#1e1b4b]">
@@ -191,9 +190,9 @@ export default function WeddingServicesPage() {
                         {weddingServices.map((service, idx) => {
                             const Icon = service.icon;
                             const isDark = service.bg === "bg-[#1e1b4b]";
-                            
+
                             return (
-                                <motion.div 
+                                <motion.div
                                     key={idx}
                                     whileHover={{ scale: 1.02, x: 10 }}
                                     className={`${service.bg} rounded-3xl border-[4px] border-[#1e1b4b] p-6 shadow-[8px_8px_0px_0px_#1e1b4b] flex items-center gap-6 cursor-pointer transition-all`}
@@ -233,7 +232,7 @@ export default function WeddingServicesPage() {
                             const Icon = style.icon;
                             // Giving the middle card a slight offset to break the grid monotony
                             const offsetClass = idx === 1 ? "md:-translate-y-8" : "";
-                            
+
                             return (
                                 <motion.div
                                     key={idx}
@@ -265,7 +264,7 @@ export default function WeddingServicesPage() {
                 >
                     {/* Decorative subtle pattern inside */}
                     <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "radial-gradient(#ffffff 2px, transparent 2px)", backgroundSize: "30px 30px" }} />
-                    
+
                     <div className="relative z-10 flex flex-col items-center mb-12 text-center">
                         <span className="text-[#FF9800] font-black uppercase tracking-[0.2em] mb-4 text-sm bg-white/10 px-4 py-2 rounded-full border border-white/20">The Megha Difference</span>
                         <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">

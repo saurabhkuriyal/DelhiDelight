@@ -2,12 +2,10 @@
 
 import { motion } from "framer-motion";
 import {
-    Cake,
     ChefHat,
     Flame,
     Gift,
     GlassWater,
-    HeartPulse,
     Home,
     IceCream,
     Music,
@@ -16,7 +14,6 @@ import {
     Star
 } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 
 const partyOccasions = [
     {
@@ -95,8 +92,8 @@ export default function PrivateEventsPage() {
                     className="bg-[#4ACF50] w-full rounded-[3rem] border-[4px] border-[#1e1b4b] shadow-[12px_12px_0px_0px_#1e1b4b] p-8 md:p-12 mb-24 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 transform hover:scale-[1.01] transition-transform"
                 >
                     {/* Decorative pattern */}
-                     <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: "radial-gradient(#ffffff 2px, transparent 2px)", backgroundSize: "30px 30px" }} />
-                    
+                    <div className="absolute inset-0 opacity-[0.15]" style={{ backgroundImage: "radial-gradient(#ffffff 2px, transparent 2px)", backgroundSize: "30px 30px" }} />
+
                     <div className="relative z-10 max-w-3xl">
                         <div className="flex items-center gap-3 mb-4">
                             <Star className="text-[#1e1b4b]" size={36} fill="#FF9800" />
@@ -122,20 +119,20 @@ export default function PrivateEventsPage() {
                     >
                         {/* Decorative Background Card */}
                         <div className="absolute inset-0 bg-[#FF9800] rounded-[3rem] transform rotate-3 scale-105 border-[4px] border-[#1e1b4b] pointer-events-none" />
-                        
+
                         <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[3rem] border-[4px] border-[#1e1b4b] shadow-[12px_12px_0px_0px_#1e1b4b] overflow-hidden group bg-white">
                             <Image
-                                src="/indian_private_event_catering.png"
+                                src="/Private-1.png"
                                 alt="Lively Indian Private Party Catering with Live Chef"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                             />
-                            
+
                             <div className="absolute bottom-6 right-6 bg-[#E91E63] text-white border-[3px] border-[#1e1b4b] shadow-[4px_4px_0px_0px_#1e1b4b] rounded-full p-4 flex items-center justify-center transform group-hover:-rotate-12 transition-transform">
                                 <Sparkles size={28} />
                             </div>
                         </div>
-                        
+
                         {/* Floating Event Fun Element */}
                         <div className="absolute -top-6 -left-6 bg-white text-[#1e1b4b] border-[4px] border-[#1e1b4b] shadow-[8px_8px_0px_0px_#4ACF50] p-6 rounded-3xl flex items-center gap-4 -rotate-[5deg] z-20 hover:rotate-0 transition-transform cursor-default">
                             <div className="bg-[#1e1b4b] p-3 rounded-xl border-[2px] border-white/20">
@@ -162,9 +159,9 @@ export default function PrivateEventsPage() {
                         {partyOccasions.map((occasion, idx) => {
                             const Icon = occasion.icon;
                             const isDark = occasion.bg === "bg-[#1e1b4b]";
-                            
+
                             return (
-                                <motion.div 
+                                <motion.div
                                     key={idx}
                                     whileHover={{ scale: 1.02, x: 10 }}
                                     className={`${occasion.bg} rounded-3xl border-[4px] border-[#1e1b4b] p-6 shadow-[8px_8px_0px_0px_#1e1b4b] flex items-center gap-6 cursor-pointer transition-all`}
@@ -189,7 +186,7 @@ export default function PrivateEventsPage() {
 
                 {/* EXTRA HIGHLIGHTS (EXPERIENCES) */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-20 mb-10">
-                    
+
                     {/* Live Tandoor & Chaat Counters */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -198,13 +195,13 @@ export default function PrivateEventsPage() {
                         className="bg-[#1e1b4b] rounded-[3rem] border-[4px] border-[#1e1b4b] p-8 md:p-12 shadow-[12px_12px_0px_0px_#E91E63] relative overflow-hidden flex flex-col items-start justify-center transform hover:rotate-1 transition-transform"
                     >
                         <div className="absolute top-0 right-0 w-48 h-48 bg-[#E91E63] rounded-full blur-[80px] opacity-40 pointer-events-none" />
-                        
+
                         <div className="w-16 h-16 bg-[#FF9800] rounded-2xl flex items-center justify-center border-[3px] border-[#1e1b4b] shadow-[4px_4px_0px_0px_#1e1b4b] mb-6 relative z-10">
                             <Flame size={32} className="text-[#1e1b4b]" />
                         </div>
-                        
+
                         <h2 className="text-3xl font-black text-white uppercase tracking-tight relative z-10 mb-4">
-                            Live Tandoor & <br/><span className="text-[#FF9800]">Chaat Counters</span>
+                            Live Tandoor & <br /><span className="text-[#FF9800]">Chaat Counters</span>
                         </h2>
                         <p className="text-white/80 font-bold text-lg relative z-10">
                             Bring the vibrant streets of India to your backyard with freshly grilled kebabs and interactive chaat stations right at the party.
@@ -220,13 +217,13 @@ export default function PrivateEventsPage() {
                         className="bg-[#E91E63] rounded-[3rem] border-[4px] border-[#1e1b4b] p-8 md:p-12 shadow-[12px_12px_0px_0px_#FF9800] relative overflow-hidden flex flex-col items-start justify-center transform hover:-rotate-1 transition-transform"
                     >
                         <div className="absolute top-0 right-0 w-48 h-48 bg-white rounded-full blur-[80px] opacity-20 pointer-events-none" />
-                        
+
                         <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-[3px] border-[#1e1b4b] shadow-[4px_4px_0px_0px_#1e1b4b] mb-6 relative z-10">
                             <IceCream size={32} className="text-[#1e1b4b]" />
                         </div>
-                        
+
                         <h2 className="text-3xl font-black text-[#1e1b4b] uppercase tracking-tight relative z-10 drop-shadow-sm mb-4">
-                            Signature <br/><span className="text-white">Dessert Bar</span>
+                            Signature <br /><span className="text-white">Dessert Bar</span>
                         </h2>
                         <p className="text-white font-bold text-lg relative z-10">
                             End the night on a sweet note! Custom cakes, traditional mithai, mouth-watering puddings, and a stunning dessert presentation.

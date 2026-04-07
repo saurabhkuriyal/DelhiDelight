@@ -22,7 +22,7 @@ const heroSlides = [
     subtitle: "Premium catering services for every occasion.",
   },
   {
-    image: "https://images.unsplash.com/photo-1547573854-74d2a71d0827?q=80&w=2040&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1538334421852-687c439c92f4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Taste the Excellence",
     subtitle: "Gourmet dishes prepared with passion and precision.",
   },

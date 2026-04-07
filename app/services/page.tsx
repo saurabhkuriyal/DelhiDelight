@@ -17,7 +17,7 @@ import React, { useRef } from "react";
 const services = [
     {
         id: 1,
-        link:"Mess",
+        link: "Mess",
         title: "University / College / School Mess",
         description: "Nutritious, hygienic, and homely meals designed for growing students. We ensure a balanced diet that keeps energy high and tastes like home.",
         icon: GraduationCap,
@@ -26,7 +26,7 @@ const services = [
     },
     {
         id: 2,
-        link:"cafeteria",
+        link: "cafeteria",
         title: "University / College / School Cafeteria ",
         description: "With maintaining every standards of hygiene and quality we provide the best food to the students.",
         icon: ChefHat,
@@ -35,7 +35,7 @@ const services = [
     },
     {
         id: 3,
-        link:"hospital",
+        link: "hospital",
         title: "Hospital Catering Services",
         description: "Reliable daily meals services for Hospital  . Affordable, tasty, and timely delivery to ensure residents never skip a meal.",
         icon: Building2,
@@ -44,7 +44,7 @@ const services = [
     },
     {
         id: 4,
-        link:"corporate",
+        link: "corporate",
         title: "Corporate Cafeterias",
         description: "Fueling the workforce with professional cafeteria management. From power breakfasts to executive lunches, we handle it all.",
         icon: Briefcase,
@@ -54,7 +54,7 @@ const services = [
     },
     {
         id: 5,
-        link:"event",
+        link: "event",
         title: "Private Events",
         description: "With a wide reach in school in NCT Delhi we can assure our canteen servide to your children",
         icon: Truck,
@@ -63,7 +63,7 @@ const services = [
     },
     {
         id: 6,
-        link:"wedding",
+        link: "wedding",
         title: "Destination Wedding",
         description: "Our signature luxury catering for your special day. Exquisite menus, royal presentation, and service that treats guests like royalty.",
         icon: Utensils,
@@ -168,11 +168,13 @@ const ServiceCard = ({ service }: { service: any }) => {
                     ))}
                 </ul>
 
-                <Link href="/contact" className="w-full">
-                    <button className="w-full py-3 rounded-xl bg-[#1e1b4b] text-white font-black text-sm tracking-wide uppercase flex items-center justify-center gap-2 hover:bg-[#4ACF50] hover:text-[#1e1b4b] border-2 border-white hover:border-[#1e1b4b] transition-all shadow-lg">
-                        Get Quote <ArrowUpRight size={18} />
-                    </button>
+                <Link
+                    href="/contact"
+                    className="w-full py-3 rounded-xl bg-[#1e1b4b] text-white font-black text-sm tracking-wide uppercase flex items-center justify-center gap-2 hover:bg-[#4ACF50] hover:text-[#1e1b4b] border-2 border-white hover:border-[#1e1b4b] transition-all shadow-lg"
+                >
+                    Get Quote <ArrowUpRight size={18} />
                 </Link>
+
             </div>
         </motion.div>
     );
@@ -248,11 +250,13 @@ export default function ServicesPage() {
                     <p className="text-[#1e1b4b] text-xl font-bold max-w-xl mx-auto mb-8 relative z-10">
                         We specialize in custom catering solutions. Reach out to us with your specific requirements, and we'll tailor a plan just for you.
                     </p>
-                    <Link href="/contact" className="relative z-10">
-                        <button className="bg-[#1e1b4b] text-white px-10 py-4 rounded-full font-black shadow-[6px_6px_0px_0px_#ffffff] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#ffffff] transition-all border-2 border-white text-lg">
-                            Talk to an Expert
-                        </button>
+                    <Link
+                        href="/contact"
+                        className="relative z-10 inline-block bg-[#1e1b4b] text-white px-10 py-4 rounded-full font-black shadow-[6px_6px_0px_0px_#ffffff] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#ffffff] transition-all border-2 border-white text-lg"
+                    >
+                        Talk to an Expert
                     </Link>
+
                 </div>
             </motion.div>
         </div>

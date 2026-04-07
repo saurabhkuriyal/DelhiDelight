@@ -149,7 +149,10 @@ export default function Home() {
                 Plan Your Event <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button className="w-full sm:w-auto px-8 py-5 bg-white text-[#1e1b4b] rounded-full font-black text-lg shadow-[6px_6px_0px_0px_#E91E63] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#E91E63] transition-all flex items-center justify-center gap-2 border-2 border-[#1e1b4b]">
-                Our Services
+                <Link href="/services">
+                  Our Services
+                </Link>
+
               </button>
             </div>
           </motion.div>

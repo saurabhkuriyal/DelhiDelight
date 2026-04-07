@@ -167,13 +167,9 @@ const ServiceCard = ({ service }: { service: any }) => {
                         </li>
                     ))}
                 </ul>
-
-                <Link
-                    href="/contact"
-                    className="w-full py-3 rounded-xl bg-[#1e1b4b] text-white font-black text-sm tracking-wide uppercase flex items-center justify-center gap-2 hover:bg-[#4ACF50] hover:text-[#1e1b4b] border-2 border-white hover:border-[#1e1b4b] transition-all shadow-lg"
-                >
+                <button className="w-full py-3 rounded-xl bg-[#1e1b4b] text-white font-black text-sm tracking-wide uppercase flex items-center justify-center gap-2 hover:bg-[#4ACF50] hover:text-[#1e1b4b] border-2 border-white hover:border-[#1e1b4b] transition-all shadow-lg">
                     Get Quote <ArrowUpRight size={18} />
-                </Link>
+                </button>
 
             </div>
         </motion.div>
@@ -250,13 +246,11 @@ export default function ServicesPage() {
                     <p className="text-[#1e1b4b] text-xl font-bold max-w-xl mx-auto mb-8 relative z-10">
                         We specialize in custom catering solutions. Reach out to us with your specific requirements, and we'll tailor a plan just for you.
                     </p>
-                    <Link
-                        href="/contact"
-                        className="relative z-10 inline-block bg-[#1e1b4b] text-white px-10 py-4 rounded-full font-black shadow-[6px_6px_0px_0px_#ffffff] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#ffffff] transition-all border-2 border-white text-lg"
-                    >
-                        Talk to an Expert
+                    <Link href="/contact" className="relative z-10">
+                        <button className="bg-[#1e1b4b] text-white px-10 py-4 rounded-full font-black shadow-[6px_6px_0px_0px_#ffffff] hover:translate-y-1 hover:shadow-[2px_2px_0px_0px_#ffffff] transition-all border-2 border-white text-lg">
+                            Talk to an Expert
+                        </button>
                     </Link>
-
                 </div>
             </motion.div>
         </div>

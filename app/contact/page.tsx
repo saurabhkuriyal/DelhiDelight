@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import { motion } from "framer-motion";
 import {
     Clock,
@@ -30,9 +31,17 @@ export default function ContactPage() {
         });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         // Handle form submission logic here
+        try {
+            const respone = await axios.post("https://formsubmit.co/ajax/sourabhkuriyal77@gmail.com", formState)
+            console.log("response", respone.data);
+
+        } catch (error) {
+            console.log("error", error);
+
+        }
         console.log("Form submitted:", formState);
         alert("Thank you! We will get back to you shortly.");
     };

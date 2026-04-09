@@ -91,7 +91,7 @@ export default function ContactPage() {
                             <InfoCard
                                 icon={Phone}
                                 title="Call Us"
-                                content="+91 9811228649"
+                                content="+91 9811332916"
                                 subContent="+91 9811228623"
                             />
                             <InfoCard

@@ -6,11 +6,11 @@ import {
     Clock,
     Facebook,
     Instagram,
+    Linkedin,
     Mail,
     MapPin,
     Phone,
-    Send,
-    Twitter
+    Send
 } from "lucide-react";
 import { useState } from "react";
 
@@ -35,7 +35,7 @@ export default function ContactPage() {
         e.preventDefault();
         // Handle form submission logic here
         try {
-            const respone = await axios.post("https://formsubmit.co/ajax/contact@delhidelight.com", formState)
+            const respone = await axios.post("https://formsubmit.co/ajax/contact@delhiidelight.com", formState)
             console.log("response", respone.data);
 
         } catch (error) {
@@ -118,9 +118,9 @@ export default function ContactPage() {
                         <div className="pt-8 border-t border-[#1e1b4b]/10">
                             <h3 className="text-[#1e1b4b] font-black mb-4">Follow Our Journey</h3>
                             <div className="flex gap-4">
-                                <SocialLink icon={Instagram} href="#" />
-                                <SocialLink icon={Facebook} href="#" />
-                                <SocialLink icon={Twitter} href="#" />
+                                <SocialLink icon={Instagram} href="https://www.instagram.com/delhiidelight/" />
+                                <SocialLink icon={Facebook} href="https://www.facebook.com/profile.php?id=61569249144461" />
+                                <SocialLink icon={Linkedin} href="https://www.linkedin.com/in/delhi-delight-b47b63402/" />
                             </div>
                         </div>
                     </motion.div>

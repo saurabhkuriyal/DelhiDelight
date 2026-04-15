@@ -35,7 +35,7 @@ export default function ContactPage() {
         e.preventDefault();
         // Handle form submission logic here
         try {
-            const respone = await axios.post("https://formsubmit.co/ajax/sourabhkuriyal77@gmail.com", formState)
+            const respone = await axios.post("https://formsubmit.co/ajax/contact@delhidelight.com", formState)
             console.log("response", respone.data);
 
         } catch (error) {

@@ -7,8 +7,8 @@ import {
     Mail,
     MapPin,
     Phone,
-    Twitter,
-    UtensilsCrossed
+    UtensilsCrossed,
+    Youtube
 } from "lucide-react";
 import Link from "next/link";
 
@@ -40,10 +40,10 @@ export default function Footer() {
                             Crafting culinary masterpieces since 1998. We bring the authentic taste of tradition to your most cherished celebrations.
                         </p>
                         <div className="flex gap-4">
-                            <SocialIcon icon={Instagram} href="#" />
-                            <SocialIcon icon={Facebook} href="#" />
-                            <SocialIcon icon={Twitter} href="#" />
-                            <SocialIcon icon={Linkedin} href="#" />
+                            <SocialIcon icon={Instagram} href="https://www.instagram.com/delhiidelight/" />
+                            <SocialIcon icon={Facebook} href="https://www.facebook.com/profile.php?id=61569249144461" />
+                            <SocialIcon icon={Youtube} href="https://www.youtube.com/@DelhiiDelight" />
+                            <SocialIcon icon={Linkedin} href="https://www.linkedin.com/in/delhi-delight-b47b63402/" />
                         </div>
                     </div>
 
@@ -91,7 +91,7 @@ export default function Footer() {
                                 <div className="p-2 rounded-full bg-white border border-emerald-100 group-hover:border-amber-500/50 group-hover:text-amber-600 transition-colors">
                                     <Mail size={16} />
                                 </div>
-                                <span className="text-sm">contact@delhidelight.com</span>
+                                <span className="text-sm">contact@delhiidelight.com</span>
                             </li>
                         </ul>
                     </div>
